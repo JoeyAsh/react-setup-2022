@@ -11,12 +11,14 @@ function resolveAliasPath(relativeToBabelConf) {
 const defaultAlias = {
     '@joeyash-monorepo/common': resolveAliasPath('./packages/common/src'),
     '@joeyash-monorepo/client': resolveAliasPath('./packages/client/src'),
-    '@joeyash-monorepo/themes': resolveAliasPath('./packages/themes/src'),
     '@joeyash-monorepo/server': resolveAliasPath('./packages/server/src'),
 };
 
 const productionPlugins = [
-    ['babel-plugin-react-remove-properties', {properties: ['data-joeyash-test']}],
+    [
+        'babel-plugin-react-remove-properties',
+        {properties: ['data-joeyash-test']},
+    ],
 ];
 
 module.exports = function getBabelConfig(api) {
