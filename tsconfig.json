@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "target": "es6",
+        "lib": ["es2020", "dom"],
+        "jsx": "preserve",
+        "moduleResolution": "node",
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "noEmit": true,
+        "experimentalDecorators": true,
+        "baseUrl": "./",
+        "allowSyntheticDefaultImports": true,
+        "noErrorTruncation": false,
+        "allowJs": true,
+        "paths": {
+            "@mui/client": ["./packages/client/src"],
+            "@mui/client/*": ["./packages/client/src/*"],
+            "@mui/common": ["./packages/common/src"],
+            "@mui/common/*": ["./packages/common/src/*"],
+            "@mui/server": ["./packages/server/src/*"],
+            "@mui/server/*": ["./packages/server/src/*"],
+            "@mui/themes": ["./packages/themes/src/*"],
+            "@mui/themes/*": ["./packages/themes/src/*"],
+
+        },
+        // Otherwise we get react-native typings which conflict with dom.lib.
+        "types": ["node", "react", "react-is/next"]
+    },
+    "exclude": ["**/.*/", "**/build", "**/node_modules", "docs/export"]
+}
