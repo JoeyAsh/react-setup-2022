@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "rootDir": "./",
         "module": "esnext",
         "target": "es6",
         "lib": ["es2020", "dom"],
@@ -16,14 +17,12 @@
         "noErrorTruncation": false,
         "allowJs": true,
         "paths": {
-            "@mui/client": ["./packages/client/src"],
-            "@mui/client/*": ["./packages/client/src/*"],
-            "@mui/common": ["./packages/common/src"],
-            "@mui/common/*": ["./packages/common/src/*"],
-            "@mui/server": ["./packages/server/src/*"],
-            "@mui/server/*": ["./packages/server/src/*"],
-            "@mui/themes": ["./packages/themes/src/*"],
-            "@mui/themes/*": ["./packages/themes/src/*"],
+            "@joeyash-monorepo/client": ["./packages/client/src"],
+            "@joeyash-monorepo/client/*": ["./packages/client/src/*"],
+            "@joeyash-monorepo/common": ["./packages/common/src/lib"],
+            "@joeyash-monorepo/common/*": ["./packages/common/src/lib/*"],
+            "@joeyash-monorepo/server": ["./packages/server/src/*"],
+            "@joeyash-monorepo/server/*": ["./packages/server/src/*"],
 
         },
         // Otherwise we get react-native typings which conflict with dom.lib.
